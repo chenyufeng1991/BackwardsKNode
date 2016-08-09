@@ -30,7 +30,7 @@ int main(int argc, const char * argv[])
     Node *pHead;
     CreateList(&pHead);
 
-    PrintBackwordK(pHead, 2);
+    PrintBackwordK(pHead, 1);
 
     return 0;
 }
@@ -66,6 +66,7 @@ void PrintBackwordK(Node *pHead, int k)
 {
     Node *front = pHead;
     Node *behide = pHead;
+    int originK = k;
 
     while (--k)
     {
@@ -78,17 +79,6 @@ void PrintBackwordK(Node *pHead, int k)
         behide = behide->next;
     }
 
-    cout << "倒数第K个元素是：" << behide->element << endl;
+    cout << "倒数第" << originK << "个元素是：" << behide->element << endl;
 
 }
-
-
-
-
-
-
-
-
-
-
-
